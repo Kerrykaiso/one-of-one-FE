@@ -1,13 +1,5 @@
-import Hero from "./components/Hero"
-import Service from "./components/Service"
-import Services from "./components/Services"
+import { ArtistCta, ArtistFeature, CategorySection, DropBanner, Hero, HowItWorks, ProductSection } from "./components/home/HomeSections";
+import { Newsletter } from "./components/layout/Footer";
 export default function Home() {
-  return(
-   <div >
-    <Hero />
-    <Service />
-    <Services />
-
-   </div>
-  )
+  return <><Hero/><CategorySection/><ProductSection/><DropBanner/><ArtistFeature/><HowItWorks/><ArtistCta/><Newsletter/></>;
 }

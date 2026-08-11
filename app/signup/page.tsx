@@ -1,0 +1,2 @@
+import { AccountForm } from "../components/forms/SimpleForm";import { Container, Eyebrow } from "../components/ui/Primitives";
+export default function Signup(){return <Container className="account-page"><div><Eyebrow>Join One of One</Eyebrow><h1>COLLECT<br/>DIFFERENTLY.</h1><p>Save editions, move faster on drops, and follow the artists you love.</p></div><div><h2>Create account</h2><AccountForm signup/></div></Container>}

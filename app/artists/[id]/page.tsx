@@ -1,0 +1,6 @@
+import { notFound } from "next/navigation";
+import { artists, products } from "@/app/data/marketplace";
+import { ImageWithFallback } from "@/app/components/ui/ImageWithFallback";
+import { Container, Eyebrow, SectionHeading } from "@/app/components/ui/Primitives";
+import { ProductGrid } from "@/app/components/product/ProductCard";
+export default async function ArtistPage({params}:{params:Promise<{id:string}>}){const {id}=await params;const a=artists.find(x=>x.id===id);if(!a)notFound();const work=products.filter(p=>p.artist.id===a.id);return <><section className="artist-profile"><Container><div><Eyebrow>{a.location} · Independent artist</Eyebrow><h1>{a.name}</h1><p>{a.bio} Their practice moves between analog mark-making and digital collage, creating images that reward a second look.</p><div className="socials"><a href="#">Instagram ↗</a><a href="#">Portfolio ↗</a></div></div><ImageWithFallback src={a.avatar} alt={a.name}/><ImageWithFallback src={a.artwork} alt={`Selected artwork by ${a.name}`}/></Container></section><section className="section"><Container><SectionHeading eyebrow="Available now" title={`${a.name.toUpperCase()} EDITIONS`}/><ProductGrid products={work}/></Container></section></>}

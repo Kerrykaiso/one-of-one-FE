@@ -19,7 +19,7 @@ export const FormSchema = z.object({
   phone: z.regex(/^\d+$/, "Please provide a valid phone number"),
 });
 export type Orderdetails = Productlist & {
-  productId: String;
+  productId: string;
   designerEmail: string;
   productName: string;
 };
