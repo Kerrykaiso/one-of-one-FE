@@ -25,6 +25,7 @@ export function SiteHeader() {
     <AnimatePresence>{menu && <motion.div className="mobile-menu" initial={{x:"100%"}} animate={{x:0}} exit={{x:"100%"}} transition={{type:"spring", damping:28, stiffness:240}}>
       <div><Link href="/" className="wordmark" onClick={()=>setMenu(false)} aria-label="One of One home">ONE / ONE</Link><button onClick={()=>setMenu(false)} aria-label="Close menu"><X/></button></div>
       <nav>{links.map(([n,h], i)=><motion.div key={h} initial={{x:40,opacity:0}} animate={{x:0,opacity:1}} transition={{delay:.05*i}}><Link href={h} className={isActive(h)?"active":""} aria-current={isActive(h)?"page":undefined} onClick={()=>setMenu(false)}><small>0{i+1}</small><span>{n}</span><i/></Link></motion.div>)}</nav>
+      <div className="mobile-account-links"><Link href="/login" onClick={()=>setMenu(false)}>Customer sign in</Link><Link href="/artist/login" onClick={()=>setMenu(false)}>Artist sign in</Link></div>
       <p>ART WORTH WEARING.<br/>MADE IN SMALL NUMBERS.</p>
     </motion.div>}</AnimatePresence>
   </>;
