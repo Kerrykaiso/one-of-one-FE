@@ -1,5 +1,5 @@
 import PDetailsInteraction from "@/app/components/PDetailsInteraction";
-import ProductSteps from "@/app/components/ProductSteps";
+//import ProductSteps from "@/app/components/ProductSteps";
 import { Productlist } from "@/app/types/productTypes";
 import React from "react";
 
@@ -19,7 +19,6 @@ const ProductDetail = () => {
   return (
     <div className=" justify-center items-center h-screen mt-12 px-32 flex flex-col md:flex-row  md:px-10 gap-3 md:gap-8  md:items-center md:justify-center rounded-2xl bg-amber-200">
       <PDetailsInteraction product={singleProduct} />
-      <ProductSteps />
     </div>
   );
 };
