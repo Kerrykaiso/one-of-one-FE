@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Button from "./Button";
-import tshirt from "../../public/t-shirt-9611374.webp";
+//import tshirt from "../../public/t-shirt-9611374.webp";
 
 const Service = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -23,11 +23,11 @@ const Service = () => {
     tl.fromTo(
       ".blue",
       { xPercent: -100 }, // starting state
-      { xPercent: 0, ease: "power2.out" }
+      { xPercent: 0, ease: "power2.out" },
     ).fromTo(
       ".yellow",
       { xPercent: 100 }, // starting state
-      { xPercent: 0, ease: "power2.out" } // ending state
+      { xPercent: 0, ease: "power2.out" }, // ending state
     );
   });
   return (
