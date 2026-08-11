@@ -21,13 +21,13 @@ const PDetailsInteraction = ({ product }: { product: Productlist }) => {
       <div className="flex justify-center pt-2 gap-3">
         <button
           className="w-4 h-4 md:w-8 md:h-8 bg-white rounded-2xl shadow-lg flex justify-center items-center"
-          onClick={(e) => setDefaultImage("F")}
+          onClick={() => setDefaultImage("F")}
         >
           <ArrowLeft className="text-black" />
         </button>
         <button
           className="w-4 h-4 md:w-8 md:h-8 bg-white rounded-2xl shadow-lg flex justify-center items-center"
-          onClick={(e) => setDefaultImage("B")}
+          onClick={() => setDefaultImage("B")}
         >
           <ArrowRight className="text-black" />
         </button>

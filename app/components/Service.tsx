@@ -11,7 +11,7 @@ const Service = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    let tl = gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".contain",
         start: "top top",
