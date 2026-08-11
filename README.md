@@ -32,11 +32,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 APIs
 GET ALL PRODUCTS
 URL: http://localhost:8000/v1/all-products
+METHOD: GET
+OPTIONAL FOR FILTER QUERIES:  ?color=string ?size=string
+EVERY REQUEST QUERY: ?page=int ?cursor=int
 RESULT: {
 "cache": boolean,
 "createdAt": string,
-"cursor": integer,
+"nextCursor": integer,
 "message":string,
+"nextPage":int,
 "data":[]
 }
  //DATA ARRAY CONTENT
