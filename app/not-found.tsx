@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <section className="not-found"><p>404 · Lost edition</p><h1>THIS PIECE<br/>DOESN’T EXIST.</h1><Link className="button button-light" href="/">Return home ↗</Link></section>}
