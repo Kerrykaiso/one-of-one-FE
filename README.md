@@ -31,9 +31,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 APIs
 GET ALL PRODUCTS
-URL: http://localhost:8000/v1/all-products
+URL: http://localhost:8000/v1/product/all-product
 METHOD: GET
-OPTIONAL FOR FILTER QUERIES:  ?color=string ?size=string
+OPTIONAL FOR FILTER QUERIES:  ?color=string ?size=string ?artist=string
 EVERY REQUEST QUERY: ?page=int ?cursor=int
 RESULT: {
 "cache": boolean,
@@ -54,6 +54,7 @@ RESULT: {
   "size": string,
   "color": string,
   "cursor": integer,
+  "productStory": string,
   "frontImage": string,
   "owner": string,
   "backImage": string,
@@ -61,6 +62,91 @@ RESULT: {
   "UpdatedAt": string
   }
  ]
+
+ GET ALL PRODUCT BY ID
+URL: http://localhost:8000/v1/product/:productId
+METHOD: GET
+RESULT:   {
+   "productName":string,
+ "productId": string,
+ "designerEmail": string,
+  "designerName": string,
+  "productStory":string
+  "status": string,
+  "size": string,
+  "color": string,
+  "cursor": integer,
+  "frontImage": string,
+  "owner": string,
+  "backImage": string,
+  "CreatedAt": string,
+  "UpdatedAt": string
+  }
+   GET ALL DESIGNS RELATED TO ARTIST (MORE FROM X)
+URL: http://localhost:8000/v1/designer/${designerName}
+METHOD: GET
+RESULT: {
+"message":string,
+"data":[]
+}
+ //DATA ARRAY CONTENT
+ "data":[
+  {
+   "productName":string,
+ "productId": string,
+ "designerEmail": string,
+  "designerName": string,
+  "status": string,
+  "size": string,
+  "color": string,
+  "cursor": integer,
+  "productStory": string,
+  "frontImage": string,
+  "owner": string,
+  "backImage": string,
+  "CreatedAt": string,
+  "UpdatedAt": string
+  }
+ ]
+
+   GET ALL COLORS
+URL: http://localhost:8000/v1/get-colors
+METHOD: GET
+RESULT :{
+ "message" :string
+ "data":[]
+}
+ //DATA ARRAY CONTENT
+data:[
+{
+"color" :string,
+"hexCode" :string
+}
+]
+
+BUY SHIRT
+URL: http://localhost:8000/v1/buy/initialize-payment
+METHOD: POST
+BODY: email string 
+		amount int 
+	 productId string 
+	 designerName string 
+		designerEmail string 
+		productName string 
+		phoneNumber string
+		owner string 
+		address string 
+		state string
+  country string
+
+  CHECKOUT FORM FIELDS (ALL FIELDS REQUIRED)
+  owner string
+  email string
+  phoneNumber string
+  address string
+  country string
+  state string
+  
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
