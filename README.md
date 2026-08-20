@@ -31,7 +31,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 APIs
 GET ALL PRODUCTS
-URL: http://localhost:8000/v1/product/all-product
+URL: http://localhost:8000/product/api/product/all-product
 METHOD: GET
 OPTIONAL FOR FILTER QUERIES:  ?color=string ?size=string ?artist=string
 EVERY REQUEST QUERY: ?page=int ?cursor=int
@@ -64,7 +64,7 @@ RESULT: {
  ]
 
  GET ALL PRODUCT BY ID
-URL: http://localhost:8000/v1/product/:productId
+URL: http://localhost:8000/product/api/product/:productId
 METHOD: GET
 RESULT:   {
    "productName":string,
@@ -82,8 +82,8 @@ RESULT:   {
   "CreatedAt": string,
   "UpdatedAt": string
   }
-   GET ALL DESIGNS RELATED TO ARTIST (MORE FROM X)
-URL: http://localhost:8000/v1/designer/${designerName}
+   GET ALL PRODUCT RELATED TO ARTIST (MORE FROM X)
+URL: http://localhost:8000/product/all-product?artistName
 METHOD: GET
 RESULT: {
 "message":string,
@@ -110,7 +110,7 @@ RESULT: {
  ]
 
    GET ALL COLORS
-URL: http://localhost:8000/v1/get-colors
+URL: http://localhost:8000/designer/api/get-colors
 METHOD: GET
 RESULT :{
  "message" :string
@@ -125,7 +125,7 @@ data:[
 ]
 
 BUY SHIRT
-URL: http://localhost:8000/v1/buy/initialize-payment
+URL: http://localhost:8000/payment/api/initialize-payment
 METHOD: POST
 BODY: email string 
 		amount int 
