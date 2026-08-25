@@ -30,6 +30,16 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 APIs
+USER GOOGLE AUTH
+URL: http://localhost:8000/auth/user/google-auth
+METHOD: GET
+RESULT: STRING URL
+
+DESIGNER GOOGLE AUTH
+URL: http://localhost:8000/auth/designer/google-auth
+METHOD: GET
+RESULT: STRING URL
+
 GET ALL PRODUCTS
 URL: http://localhost:8000/product/api/product/all-product
 METHOD: GET
