@@ -33,12 +33,18 @@ APIs
 USER GOOGLE AUTH
 URL: http://localhost:8000/auth/user/google-auth
 METHOD: GET
-RESULT: STRING URL
+RESULT: {
+"data" :string,
+"message":string
+}
 
 DESIGNER GOOGLE AUTH
 URL: http://localhost:8000/auth/designer/google-auth
 METHOD: GET
-RESULT: STRING URL
+RESULT: {
+"data" :string,
+"message":string
+}
 
 GET ALL PRODUCTS
 URL: http://localhost:8000/product/api/product/all-product
