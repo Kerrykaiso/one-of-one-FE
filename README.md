@@ -126,7 +126,7 @@ RESULT: {
  ]
 
    GET ALL COLORS
-URL: http://localhost:8000/designer/api/get-colors
+URL: http://localhost:8000/auth/api/get-colors
 METHOD: GET
 RESULT :{
  "message" :string
